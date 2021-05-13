@@ -18,8 +18,19 @@ public class EstabelecimentoResponse {
         return endereco;
     }
 
+    @Deprecated
+    public EstabelecimentoResponse() {
+    }
+
+    public EstabelecimentoResponse(String nome, String cidade, String endereco) {
+        this.nome = nome;
+        this.cidade = cidade;
+        this.endereco = endereco;
+    }
 
     public Estabelecimento toModel() {
         return new Estabelecimento(nome, cidade, endereco);
     }
+
+
 }
